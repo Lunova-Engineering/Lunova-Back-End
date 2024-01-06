@@ -17,18 +17,15 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v4
-      with:
-        node-version: 'node'  # This will use the latest stable Node.js version
-        check-latest: true    # This ensures that the cache is checked for the latest version
+    #- name: Setup Node.js environment
+   #   uses: actions/setup-node@v4
+  #    with:
+ #       node-version: 'node'  # This will use the latest stable Node.js version
+#        check-latest: true    # This ensures that the cache is checked for the latest version
 
 
-    - name: Install Dependencies
-      run: npm install
-
-    - name: Start Node Server
-      run: npm start
+ #   - name: Install Dependencies
+#      run: npm install
 
     # Add any tests or other steps here
 
