@@ -15,11 +15,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Install Node.js
-      uses: actions/setup-node@v2
+    - name: Install NodeJS
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
-        node-version: 'stable'
+        node-version: 'node'
+        check-latest: true
 
     - name: Install Dependencies
       run: npm install
