@@ -37,7 +37,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.EC2_PORT }}
         script: |
-          cd /home/ec2-user/Lunova/front-end/
+          cd /home/ec2-user/Lunova/back-end/
           git pull origin main
           npm install --production
           npx pm2 restart all
