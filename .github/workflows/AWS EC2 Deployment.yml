@@ -15,9 +15,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install NodeJS
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
+    - name: Install NodeJS  
       with:
         node-version: 'node'
         check-latest: true
