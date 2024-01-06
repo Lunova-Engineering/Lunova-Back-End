@@ -7,15 +7,14 @@ const cors = require('cors');
 const RegisterRoute = require("./RegisterRoute");
 const LoginRoute = require("./LoginRoute");
 
-const localDirectory = "/Users/drakeforness/Documents/Github/Lunova Engineering Web/Front End/client/";
-const local = true;
+
 
 // Serve static files from the React app
-app.use(express.static(path.join(local ? localDirectory : __dirname, 'build')));
+app.use(express.static(path.join(__dirname, '../../front-end/build')));
 
 // Handles any requests that don't match the ones above
 app.get('*', (req, res) => {
-    res.sendFile(path.join(local ? localDirectory : __dirname, 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, '../../front-end/build', 'index.html'));
 });
 
 // Use express json and cors middleware
