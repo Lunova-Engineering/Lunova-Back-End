@@ -38,6 +38,6 @@ jobs:
         port: ${{ secrets.EC2_PORT }}
         script: |
           cd /home/ec2-user/Lunova/
-          git pull
+          git pull origin main
           npm install --production
           npx pm2 restart all
